@@ -18,14 +18,49 @@ function altoContraste(){
 }
 
 
+// CONTROLE DA LEITURA DA PÁGINA
+
+let lendo = false;
+
 function lerPagina(){
-    speechSynthesis.cancel();
+
+    // Se já estiver lendo, interrompe a leitura
+    if(lendo){
+        speechSynthesis.cancel();
+        lendo = false;
+
+        document.getElementById("btnLeitura").innerHTML = "🔊 Ouvir Página";
+        return;
+    }
+
+    // Obtém o texto da página
     let texto = document.body.innerText;
+
+    // Cria a leitura
     let leitura = new SpeechSynthesisUtterance(texto);
+
     leitura.lang = "pt-BR";
     leitura.rate = 1;
     leitura.pitch = 1;
+
+    // Quando terminar, volta ao botão inicial
+    leitura.onend = function(){
+        lendo = false;
+        document.getElementById("btnLeitura").innerHTML = "🔊 Ouvir Página";
+    };
+
+    // Se ocorrer algum erro, libera o botão
+    leitura.onerror = function(){
+        lendo = false;
+        document.getElementById("btnLeitura").innerHTML = "🔊 Ouvir Página";
+    };
+
+    // Inicia a leitura
     speechSynthesis.speak(leitura);
+
+    lendo = true;
+
+    document.getElementById("btnLeitura").innerHTML = "⏹ Parar Leitura";
 }
 
 const links = document.querySelectorAll("nav a");

@@ -288,32 +288,117 @@ footer p {
     margin: 8px;
 }
 
-/* ALTO CONTRASTE */
+/* ==============================
+   ALTO CONTRASTE - ACESSIBILIDADE
+================================ */
 
 .contraste {
-    background: black;
-    color: white;
+    background: #000000 !important;
+    color: #ffffff !important;
 }
 
-.contraste header {
-    background: black;
+/* FUNDOS PRINCIPAIS */
+
+.contraste header,
+.contraste footer,
+.contraste nav,
+.contraste section,
+.contraste .acessibilidade {
+    background: #000000 !important;
+    color: #ffffff !important;
 }
 
-.contraste nav {
-    background: #111;
+/* TÍTULOS */
+
+.contraste h1,
+.contraste h2,
+.contraste h3,
+.contraste h4,
+.contraste h5 {
+    color: #ffff00 !important;
 }
 
-.contraste footer {
-    background: black;
+/* TEXTOS E PARÁGRAFOS */
+
+.contraste p,
+.contraste li,
+.contraste span,
+.contraste label,
+.contraste strong {
+    color: #ffffff !important;
 }
+
+/* OBJETIVOS DO PROJETO */
+
+.contraste .coluna {
+    background: #222222 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+}
+
+.contraste .coluna h4 {
+    color: #ffff00 !important;
+}
+
+.contraste .coluna li {
+    color: #ffffff !important;
+}
+
+/* TODOS OS CARDS */
 
 .contraste .card {
-    background: #222;
-    color: white;
+    background: #222222 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
 }
 
-.contraste .acessibilidade {
-    background: #222;
+.contraste .card h4 {
+    color: #ffff00 !important;
+}
+
+.contraste .card p {
+    color: #ffffff !important;
+}
+
+/* LINKS E MENU */
+
+.contraste nav a,
+.contraste a {
+    color: #ffff00 !important;
+}
+
+.contraste nav a:hover {
+    background: #444444 !important;
+}
+
+/* BOTÕES */
+
+.contraste button {
+    background: #ffff00 !important;
+    color: #000000 !important;
+    border: 2px solid #ffffff !important;
+}
+
+/* CAMPOS DE TEXTO */
+
+.contraste input,
+.contraste textarea,
+.contraste select {
+    background: #222222 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+}
+
+/* FOCO PARA NAVEGAÇÃO PELO TECLADO */
+
+.contraste a:focus,
+.contraste button:focus,
+.contraste input:focus,
+.contraste textarea:focus,
+.contraste select:focus {
+    outline: 3px solid #ffff00 !important;
+    outline-offset: 3px;
+
 }
 
 /* RESPONSIVO */
